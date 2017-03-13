@@ -31,7 +31,7 @@ app.use('/api/v1', restRouter);
 
 io.on('connection', function(socket){
 
-	twitter.stream('statuses/filter', {'track':'trump,china,india'}, function(stream) {
+	twitter.stream('statuses/sample', function(stream) {
 	    stream.on('data', function (data) {
 	        // var tweet = "Name: " + data.user.name + "\nCreated at: " + data.created_at + "\nText: " + data.text
 	        //              + "\n\u2937" + data.retweet_count + " \u2665" + data.favorite_count + "\n";
